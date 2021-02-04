@@ -18,7 +18,7 @@ public class GrafoFunc {
     private Grafo G;
 
     public GrafoFunc(AnchorPane anchorPaneGrafo, Grafo G) {
-         this.anchorPaneGrafo = anchorPaneGrafo;
+        this.anchorPaneGrafo = anchorPaneGrafo;
         this.G = G;
     }
 
@@ -46,7 +46,7 @@ public class GrafoFunc {
             circle.setFill(Color.WHITE);
             Text text = new Text(circle.getCenterX() - 4, circle.getCenterY() + 4, String.valueOf(v));
             componentes.getChildren().add(circle);
-            componentes.getChildren().add(text); 
+            componentes.getChildren().add(text);
         }
         Platform.runLater(() -> anchorPaneGrafo.getChildren().addAll(componentes));
     }

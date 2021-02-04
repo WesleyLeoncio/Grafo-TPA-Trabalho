@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="modelo.controll.FXMLPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.controll.FXMLPrincipalController">
    <children>
-      <AnchorPane fx:id="anchorPaneGrafo" layoutX="31.0" layoutY="67.0" prefHeight="268.0" prefWidth="527.0" />
+      <AnchorPane fx:id="anchorPaneGrafo" layoutX="15.0" layoutY="105.0" prefHeight="334.0" prefWidth="600.0" style="-fx-background-color: #EEE9E9;" />
+      <TextField fx:id="txt_nomeGrafo" layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="530.0" promptText="Escolha o arquivo...." text="Grafo4.txt" />
+      <Button layoutX="553.0" layoutY="57.0" mnemonicParsing="false" onAction="#buttonEventCarregar" text="Carregar" />
+      <TableView fx:id="tableView" layoutX="11.0" layoutY="452.0" prefHeight="124.0" prefWidth="606.0" stylesheets="@../css/tableView_1.css">
+        <columns>
+          <TableColumn fx:id="column_tem_ciclo" prefWidth="191.0" text="Ciclo Euleriano" />
+          <TableColumn fx:id="column_tamanho" minWidth="0.0" prefWidth="193.0" text="Tamanho" />
+            <TableColumn fx:id="column_trajeto" prefWidth="234.0" text="Trajeto Euleriano" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>

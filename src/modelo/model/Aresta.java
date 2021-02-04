@@ -19,7 +19,7 @@ public class Aresta  {
     private final int v1;
     private final int v2;
     private final double peso;
-
+    private boolean ehUsada = false;
     /**
      * Inicializa uma aresta (sem peso) entre vértices.
      * @param v1 vértice 1 (origem)
@@ -62,6 +62,15 @@ public class Aresta  {
         this.v2 = v2;
         this.peso = peso;
     }
+
+   public boolean getEhUsada() {
+        return ehUsada;
+    }
+    
+    public void setEhUsada(boolean ehUsada) {
+        this.ehUsada = ehUsada;
+    }
+    
     
     public int getV1() {
         return v1;
