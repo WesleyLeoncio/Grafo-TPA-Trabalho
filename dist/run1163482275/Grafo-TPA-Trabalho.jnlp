@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Grafo-TPA-Trabalho.jnlp">
+  <information>
+    <title>Grafo-TPA-Trabalho</title>
+    <vendor>Wesley</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Grafo-TPA-Trabalho.jar" size="29288" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Grafo-TPA-Trabalho" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="modelo.Main"  name="Grafo-TPA-Trabalho" />
+  <update check="always"/>
+</jnlp>
