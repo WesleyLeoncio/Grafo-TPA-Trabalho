@@ -16,7 +16,7 @@ public class Main extends Application {
         
         Scene scene = new Scene(root);
         
-        stage.setTitle("Grafo");
+        stage.setTitle("Ciclo Euleriano");
         stage.setScene(scene);
         stage.show();
     }

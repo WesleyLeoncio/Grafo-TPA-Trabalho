@@ -7,14 +7,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.controll.FXMLPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="632.0" style="-fx-background-color: linear-gradient(to bottom, #02aab0, #00cdac);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.controll.FXMLPrincipalController">
    <children>
-      <AnchorPane fx:id="anchorPaneGrafo" layoutX="15.0" layoutY="105.0" prefHeight="334.0" prefWidth="600.0" style="-fx-background-color: #EEE9E9;" />
-      <TextField fx:id="txt_nomeGrafo" editable="false" layoutX="14.0" layoutY="57.0" onMouseClicked="#carregarArquivo" prefHeight="25.0" prefWidth="530.0" promptText="Escolha o arquivo....">
+      <AnchorPane fx:id="anchorPaneGrafo" layoutX="15.0" layoutY="105.0" prefHeight="334.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" />
+      <TextField fx:id="txt_nomeGrafo" editable="false" layoutX="15.0" layoutY="57.0" onMouseClicked="#carregarArquivo" prefHeight="25.0" prefWidth="481.0" promptText="Escolha o arquivo....">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></TextField>
-      <Button layoutX="553.0" layoutY="57.0" mnemonicParsing="false" onAction="#buttonEventCarregar" text="Carregar" />
+      <Button layoutX="516.0" layoutY="55.0" mnemonicParsing="false" onAction="#buttonEventCarregar" prefHeight="25.0" prefWidth="93.0" style="-fx-background-radius: 10; -fx-background-color: linear-gradient(to right, #314755, #26a0da);" text="Carregar" textFill="#00ffcd">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
       <TableView fx:id="tableView" layoutX="11.0" layoutY="452.0" prefHeight="124.0" prefWidth="606.0" stylesheets="@../css/tableView_1.css">
         <columns>
           <TableColumn fx:id="column_tem_ciclo" prefWidth="191.0" text="Ciclo Euleriano" />
@@ -22,6 +25,10 @@
             <TableColumn fx:id="column_trajeto" prefWidth="234.0" text="Trajeto Euleriano" />
         </columns>
       </TableView>
-      <Label layoutX="16.0" layoutY="35.0" text="Escolha o arquivo" />
+      <Label layoutX="16.0" layoutY="35.0" text="Escolha o arquivo" textFill="#00ffcd">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
