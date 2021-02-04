@@ -1,5 +1,6 @@
 package modelo.controll;
 
+import java.io.File;
 import modelo.arquivo.In;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,6 +14,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
+import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import modelo.algoritmos.AlgoritmoCicloEuleriano;
 import modelo.algoritmos.GrafoFunc;
 import modelo.model.CaminhoEuleriano;
@@ -37,7 +40,6 @@ public class FXMLPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         Grafo(txt_nomeGrafo.getText());
     }
 
     @FXML
@@ -74,5 +76,23 @@ public class FXMLPrincipalController implements Initializable {
         observableCaminhoEuleriano = FXCollections.observableArrayList(caminhoEuleriano);
         Platform.runLater(() -> tableView.setItems(observableCaminhoEuleriano));
     }
+    
+    public void carregarArquivo(){
+        JFileChooser fc = new JFileChooser();
+        File diretorio = new File("C:\\ProjetosGIT\\Grafo-TPA-Trabalho");
+        fc.setCurrentDirectory(diretorio);
+        String caminhoURL = "";
+        int res = fc.showOpenDialog(null);
+
+        if (res == JFileChooser.APPROVE_OPTION) {
+            File arquivo = fc.getSelectedFile();
+            caminhoURL = arquivo.getPath();
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Voce nao selecionou nenhum arquivo.");
+        }
+       txt_nomeGrafo.setText(caminhoURL);
+    }                    
+   
 
 }

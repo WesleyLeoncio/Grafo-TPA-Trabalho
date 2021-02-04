@@ -10,7 +10,10 @@
 <AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.controll.FXMLPrincipalController">
    <children>
       <AnchorPane fx:id="anchorPaneGrafo" layoutX="15.0" layoutY="105.0" prefHeight="334.0" prefWidth="600.0" style="-fx-background-color: #EEE9E9;" />
-      <TextField fx:id="txt_nomeGrafo" layoutX="14.0" layoutY="57.0" prefHeight="25.0" prefWidth="530.0" promptText="Escolha o arquivo...." text="Grafo4.txt" />
+      <TextField fx:id="txt_nomeGrafo" editable="false" layoutX="14.0" layoutY="57.0" onMouseClicked="#carregarArquivo" prefHeight="25.0" prefWidth="530.0" promptText="Escolha o arquivo....">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
       <Button layoutX="553.0" layoutY="57.0" mnemonicParsing="false" onAction="#buttonEventCarregar" text="Carregar" />
       <TableView fx:id="tableView" layoutX="11.0" layoutY="452.0" prefHeight="124.0" prefWidth="606.0" stylesheets="@../css/tableView_1.css">
         <columns>
@@ -19,5 +22,6 @@
             <TableColumn fx:id="column_trajeto" prefWidth="234.0" text="Trajeto Euleriano" />
         </columns>
       </TableView>
+      <Label layoutX="16.0" layoutY="35.0" text="Escolha o arquivo" />
    </children>
 </AnchorPane>
