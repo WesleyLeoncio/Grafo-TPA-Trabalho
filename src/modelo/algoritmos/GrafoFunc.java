@@ -32,7 +32,7 @@ public class GrafoFunc {
             line.setStartY(vertices.get(a.getV1()).getY());
             line.setEndX(vertices.get(a.getV2()).getX());
             line.setEndY(vertices.get(a.getV2()).getY());
-            line.setStroke(Color.BLACK);
+            line.setStroke(colorir());
             componentes.getChildren().add(line);
         }
 
@@ -42,12 +42,21 @@ public class GrafoFunc {
             circle.setCenterX(vertices.get(v).getX());
             circle.setCenterY(vertices.get(v).getY());
             circle.setRadius(15.0f);
-            circle.setStroke(Color.BLACK);
-            circle.setFill(Color.WHITE);
+            circle.setStroke(colorir());
+            circle.setFill(colorir());
             Text text = new Text(circle.getCenterX() - 4, circle.getCenterY() + 4, String.valueOf(v));
             componentes.getChildren().add(circle);
             componentes.getChildren().add(text);
         }
         Platform.runLater(() -> anchorPaneGrafo.getChildren().addAll(componentes));
+    }
+    
+    public Color colorir(){
+        AlgoritmoCicloEuleriano algoEuleriano = new AlgoritmoCicloEuleriano(G);
+        boolean temCaminho = algoEuleriano.temCicloEuleriano();
+        if(temCaminho){
+            return Color.GREEN;
+        }
+        return Color.RED;
     }
 }
